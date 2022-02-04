@@ -1,4 +1,4 @@
-import Counter from "./views/Counter.vue";
+import Counter from "@/views/Counter.vue";
 import Home from "@/views/Home.vue";
 import {createRouter, createWebHistory} from "vue-router";
 import Offline from '@/views/Offline.vue'

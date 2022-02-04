@@ -14,12 +14,10 @@
 <script lang="ts">
 import HomeHeader from '../components/HomeHeader.vue';
 import {defineComponent} from "vue";
-import ReloadPWA from "../components/PwaRegistration.vue";
 
 export default defineComponent({
   name: 'Home',
   components: {
-    ReloadPWA,
     HomeHeader
   }
 });

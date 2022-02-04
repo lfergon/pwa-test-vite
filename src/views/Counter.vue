@@ -9,14 +9,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import useCounter from '../domain/useVueCounter';
-import ReloadPWA from '@/components/PwaRegistration.vue'
+import useCounter from '@/domain/useVueCounter';
 import HomeHeader from '@/components/HomeHeader.vue'
 
 export default defineComponent({
   name: 'Counter',
   components: {
-    ReloadPWA,
     HomeHeader
   },
   setup() {

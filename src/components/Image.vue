@@ -27,6 +27,5 @@
     object-fit: cover;
     width: 50%;
     text-align: center;
-    height: 250px;
   }
 </style>

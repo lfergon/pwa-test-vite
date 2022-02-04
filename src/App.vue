@@ -1,12 +1,22 @@
 <template>
+  <ReloadPWA/>
+  <div id="nav">
+    <router-link to="/">Counter</router-link> |
+    <router-link to="/offline">Offline</router-link> |
+    <router-link to="/home">Home</router-link>
+  </div>
   <router-view />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import ReloadPWA from '@/components/PwaRegistration.vue'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  components: {
+    ReloadPWA
+  }
 });
 </script>
 

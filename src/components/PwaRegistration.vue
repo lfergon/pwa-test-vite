@@ -5,10 +5,10 @@
       <span v-else>New content available, click on reload button to update.</span>
     </div>
     <div class="buttons flex align-middle mt-2 md:mt-0">
-      <button v-if="needRefresh" @click="updateServiceWorker()" class="button">
+      <button v-if="needRefresh" @click="updateServiceWorker()" class="button-pwa">
         Reload
       </button>
-      <button @click="close" class="button">
+      <button @click="close" class="button-pwa">
         Close
       </button>
     </div>
@@ -41,3 +41,14 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+  .button-pwa {
+    border-radius: 4px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000000;
+  }
+</style>

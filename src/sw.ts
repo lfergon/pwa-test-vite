@@ -14,7 +14,7 @@ self.addEventListener('message', (event: ExtendableMessageEvent) => {
 self.addEventListener("install", function (event: ExtendableEvent) {
     event.waitUntil(
       caches.open(version + cacheName).then(function (cache: Cache) {
-          return cache.addAll(["/", "/offline", "/home"]);
+          return cache.addAll(["/", "/offline", "/home", "https://mcusercontent.com/f27d5b77037afaaff93db8565/images/1dc79d2d-b3c2-49d5-9fc7-1edb082f839f.png"]);
       })
     );
 });

@@ -1,5 +1,4 @@
 <template>
-  <ReloadPWA/>
   <home-header msg="Hello Vue 3 + Vite + TypeScript" />
   <p>No connection</p>
 </template>
@@ -10,7 +9,7 @@ import {defineComponent} from "vue";
 import ReloadPWA from "../components/PwaRegistration.vue";
 
 export default defineComponent({
-  name: 'Home',
+  name: 'Offline',
   components: {
     ReloadPWA,
     HomeHeader

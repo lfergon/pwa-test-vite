@@ -54,6 +54,7 @@
     "vite-plugin-pwa": "^0.11.13",
     "vitest": "^0.2.5",
     "vue-tsc": "^0.0.15",
-    "workbox-precaching": "^6.4.2"
+    "workbox-precaching": "^6.4.2",
+    "workbox-window": "^6.4.2"
   }
 }

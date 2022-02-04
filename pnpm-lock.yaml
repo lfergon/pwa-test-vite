@@ -33,6 +33,7 @@ specifiers:
   vue-tsc: ^0.0.15
   vuex: ^4.0.0
   workbox-precaching: ^6.4.2
+  workbox-window: ^6.4.2
 
 dependencies:
   '@vue/cli-service': 4.5.15_92f3a137e22e28f396a2b2527e413ffc
@@ -69,6 +70,7 @@ devDependencies:
   vitest: 0.2.5_c8@7.11.0+happy-dom@2.31.1
   vue-tsc: 0.0.15
   workbox-precaching: 6.4.2
+  workbox-window: 6.4.2
 
 packages:
 

@@ -2,19 +2,23 @@
   <ReloadPWA/>
   <home-header msg="Hello Vue 3 + Vite + TypeScript" />
   <h1>This is the Counter page</h1>
-  <p>The count is {{ count }}</p>
-  <button class="button-counter" @click="increment(2)">+</button>
+  <h3>The count is {{ count }}</h3>
+  <button class="button-counter" @click="increment(1)">+</button>
   <button class="button-counter" @click="decrement(1)">-</button>
+  <h4>Image loaded from url (offline test service worker fetch test purposes)</h4>
+  <Image image-src="https://tignum.com/static/8276fa47544f39169bd89d07d1bfc054/ff82d/Web_363x203_2_1_5b9ec4e6f4.png"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import useCounter from '@/domain/useVueCounter';
-import HomeHeader from '@/components/HomeHeader.vue'
+import HomeHeader from '@/components/HomeHeader.vue';
+import Image from '@/components/Image.vue';
 
 export default defineComponent({
   name: 'Counter',
   components: {
+    Image,
     HomeHeader
   },
   setup() {

@@ -25,3 +25,7 @@ Install: [https://vite-plugin-pwa.netlify.app/guide/](https://vite-plugin-pwa.ne
 
 ### Test
 `pnpm run test`
+
+### Netlify Troubleshouting Vite and Workbox
+
+[https://github.com/antfu/vite-plugin-pwa/issues/89](https://github.com/antfu/vite-plugin-pwa/issues/89)

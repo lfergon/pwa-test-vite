@@ -2,7 +2,7 @@
   <img :src='imageSrc' alt='Image' class='image'>
 </template>
 
-<script>
+<script lang='ts'>
   import { defineComponent } from 'vue';
 
   export default defineComponent({

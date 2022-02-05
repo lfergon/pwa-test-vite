@@ -6,10 +6,10 @@ export interface CounterState {
 }
 
 const state: CounterState = {
-  count: 0
+  count: 0,
 };
 
 export default createStore({
   state,
-  mutations
+  mutations,
 });

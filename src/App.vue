@@ -1,4 +1,5 @@
 <template>
+  <PwaPrompt/>
   <ReloadPWA/>
   <div id="nav">
     <router-link to="/">Counter</router-link> |
@@ -10,12 +11,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import ReloadPWA from '@/components/PwaRegistration.vue'
+import ReloadPWA from '@/components/PwaRegistration.vue';
+import PwaPrompt from '@/components/PwaPrompt.vue';
+
 
 export default defineComponent({
   name: 'App',
   components: {
-    ReloadPWA
+    ReloadPWA,
+    PwaPrompt
   }
 });
 </script>
@@ -27,6 +31,10 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0;
 }
+body {
+  margin: 0;
+}
+
 </style>

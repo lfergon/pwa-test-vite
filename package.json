@@ -7,8 +7,8 @@
     "serve": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prettify": "pnpm prettier -u ."
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "prettify": "pnpm prettier w -u ."
   },
   "husky": {
     "hooks": {

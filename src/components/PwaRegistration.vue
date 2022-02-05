@@ -1,5 +1,5 @@
 <template>
-  <div v-if="offlineReady || needRefresh" class="flex flex-wrap" role="alert">
+  <div v-if="offlineReady || needRefresh" class="section-reload">
     <div class="message mt-1">
       <span v-if="offlineReady"> App ready to work offline </span>
       <span v-else>New content available, click on reload button to update.</span>
@@ -40,5 +40,11 @@ export default defineComponent({
     padding: 10px;
     margin: 10px;
     border: 1px solid #000000;
+  }
+  .section-reload {
+    background-color: #f9cd0b;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
   }
 </style>

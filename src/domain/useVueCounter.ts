@@ -23,6 +23,6 @@ export default function useCounter() {
   return {
     count,
     increment,
-    decrement
+    decrement,
   };
 }

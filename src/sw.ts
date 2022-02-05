@@ -3,7 +3,7 @@ import { precacheAndRoute } from 'workbox-precaching';
 declare const self: ServiceWorkerGlobalScope;
 
 const cacheName = '::serviceworker';
-const version = 'v0.0.3';
+const version = 'v0.0.4';
 
 self.addEventListener('message', (event: ExtendableMessageEvent) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -80,6 +80,32 @@ self.addEventListener('fetch', function (event: FetchEvent) {
         }) as Promise<Response>
     );
     return;
+  }
+
+  const requestURL = new URL(event.request.url);
+
+  if (requestURL.origin === location.origin) {
+    // Load static assets from cache if network is down
+    if (/\.(css|js|woff|woff2|ttf|eot|svg)$/.test(requestURL.pathname)) {
+      event.respondWith(
+        caches.open(cacheName).then(cache =>
+          caches.match(event.request).then((result) => {
+            if (!navigator.onLine) {
+              // We are offline so return the cached version immediately, null or not.
+              return result;
+            }
+            // We are online so let's run the request to make sure our content
+            // is up-to-date.
+            return fetch(event.request).then((response) => {
+              // Save the result to cache for later use.
+              cache.put(event.request, response.clone());
+              return response;
+            });
+          }),
+        ) as Promise<Response>,
+      );
+      return;
+    }
   }
 
   // For non-HTML requests, look in the cache first, fall back to the network

@@ -64,5 +64,6 @@
     font-size: 14px;
     margin: 5px;
     font-weight: 550;
+    cursor: pointer;
   }
 </style>

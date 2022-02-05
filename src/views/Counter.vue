@@ -44,5 +44,6 @@ export default defineComponent({
     padding: 5px;
     margin: 5px;
     border: none;
+    cursor: pointer;
   }
 </style>

@@ -40,6 +40,9 @@ export default defineComponent({
     padding: 10px;
     margin: 10px;
     border: 1px solid #000000;
+    cursor: pointer;
+    font-weight: 450;
+    font-size: 12px;
   }
   .section-reload {
     background-color: #f9cd0b;

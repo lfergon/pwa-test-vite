@@ -16,7 +16,7 @@
   export default defineComponent({
     name: 'PwaPrompt',
     setup() {
-      let show = ref(true);
+      let show = ref(false);
       // Initialize deferredPrompt for use later to show browser install prompt.
       // https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
       let deferredPrompt: Event;
@@ -32,8 +32,8 @@
       }
 
       const installPWA = () => {
-        deferredPrompt?.prompt();
-        deferredPrompt?.userChoice.then(() => {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => {
           dismissPrompt();
         })
       };

@@ -1,5 +1,7 @@
 # Arch Counter App
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/afc197bf-8406-49bf-b50c-0c06b0288d2c/deploy-status)](https://app.netlify.com/sites/nostalgic-lamport-8df19f/deploys)
+
 ## Instructions
 
 ```bash

@@ -18,7 +18,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useRegisterSW } from "virtual:pwa-register/vue";
-const { updateServiceWorker } = useRegisterSW();
 
 export default defineComponent({
   name: "ReloadPWA",
@@ -29,16 +28,7 @@ export default defineComponent({
       needRefresh.value = false;
     };
     return { offlineReady, needRefresh, updateServiceWorker, close };
-  },
-  methods: {
-    async close() {
-      this.offlineReady = false;
-      this.needRefresh = false;
-    },
-    async updateServiceWorker() {
-      await updateServiceWorker();
-    },
-  },
+  }
 });
 </script>
 

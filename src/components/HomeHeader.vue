@@ -14,12 +14,10 @@
 
     <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
       <div class="navbar-end">
-        <a href="" class="navbar-item">
-          <router-link to="/">Counter</router-link>
-        </a>
-
+        <router-link to="/" class="navbar-item">Counter</router-link>
         <router-link to="/home" class="navbar-item">Home</router-link>
         <router-link to="/offline" class="navbar-item">Offline</router-link>
+        <ShareUrl/>
       </div>
 
     </div>
@@ -28,9 +26,11 @@
 
 <script lang="ts">
   import { defineComponent, ref } from 'vue';
+  import ShareUrl from '@/components/ShareUrl.vue';
 
 export default defineComponent({
   name: 'HomeHeader',
+  components: { ShareUrl },
   setup() {
     let showNav = ref(false);
     return {

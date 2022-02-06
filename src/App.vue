@@ -1,17 +1,19 @@
 <template>
-  <div class="columns">
-    <div class="column">
-      <PwaPrompt/>
-      <ReloadPWA/>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="columns">
+        <div class="column">
+          <PwaPrompt/>
+          <ReloadPWA/>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <HomeHeader/>
+          <router-view />
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="columns">
-    <div class="column"></div>
-    <div class="column">
-      <HomeHeader/>
-      <router-view />
-    </div>
-    <div class="column"></div>
   </div>
 </template>
 
@@ -36,5 +38,6 @@ export default defineComponent({
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 2rem;
 }
 </style>

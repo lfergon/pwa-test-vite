@@ -1,12 +1,9 @@
 <template>
-  <div class="prompt-install" v-if="show">
+  <div class="notification is-link" v-if="show">
+    <button class="delete" @click="dismissPrompt"></button>
     <h4>Add Test PWA to Home Screen?</h4>
-
-    <button class="button-prompt" @click="installPWA">
+    <button class="button is-dark is-medium" @click="installPWA">
       Install!
-    </button>
-    <button class="button-prompt" @click="dismissPrompt">
-      No, thanks
     </button>
   </div>
 </template>
@@ -48,22 +45,4 @@
 </script>
 
 <style scoped>
-  .prompt-install {
-    background-color: #7f7f7f;
-    border-radius: 5px;
-    color: #ffffff;
-    padding: 10px;
-    top: 0;
-  }
-  .button-prompt {
-    border-radius: 2px;
-    background-color: #42b983;
-    color: #ffffff;
-    padding: 5px;
-    border: none;
-    font-size: 14px;
-    margin: 5px;
-    font-weight: 550;
-    cursor: pointer;
-  }
 </style>

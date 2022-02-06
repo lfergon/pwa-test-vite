@@ -19,6 +19,7 @@ self.addEventListener('install', function (event: ExtendableEvent) {
         '/home',
         '/offline',
         'https://tignum.com/static/8276fa47544f39169bd89d07d1bfc054/ff82d/Web_363x203_2_1_5b9ec4e6f4.png',
+        'https://d2gjspw5enfim.cloudfront.net/210512_tignum_rz.mp4',
       ]);
     })
   );
@@ -88,9 +89,11 @@ self.addEventListener('fetch', function (event: FetchEvent) {
 
   if (requestURL.origin === location.origin) {
     // Load static assets from cache if network is down
-    if (/\.(css|js|woff|woff2|ttf|eot|svg|png)$/.test(requestURL.pathname)) {
+    if (
+      /\.(css|js|woff|woff2|ttf|eot|svg|png|mp4)$/.test(requestURL.pathname)
+    ) {
       event.respondWith(
-        caches.open(cacheName).then(cache =>
+        caches.open(cacheName).then((cache) =>
           caches.match(event.request).then((result: Response | undefined) => {
             if (!navigator.onLine) {
               // We are offline so return the cached version immediately, null or not.
@@ -103,8 +106,8 @@ self.addEventListener('fetch', function (event: FetchEvent) {
               cache.put(event.request, response.clone());
               return response;
             });
-          }),
-        ) as Promise<Response>,
+          })
+        ) as Promise<Response>
       );
       return;
     }
@@ -135,9 +138,6 @@ self.addEventListener('fetch', function (event: FetchEvent) {
             })
             .catch(function () {
               // you can return an image placeholder here with
-              if (request.headers.get('Accept')?.indexOf('image') !== -1) {
-
-              }
             })
         );
       }) as Promise<Response>

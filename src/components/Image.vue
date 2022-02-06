@@ -1,8 +1,8 @@
 <template>
-  <img :src='imageSrc' alt='Image' class='image'>
+  <img :src="imageSrc" alt="Image" width="320" class="image">
 </template>
 
-<script lang='ts'>
+<script lang="ts">
   import { defineComponent } from 'vue';
 
   export default defineComponent({
@@ -23,9 +23,4 @@
 </script>
 
 <style scoped>
-  .image {
-    object-fit: cover;
-    width: 50%;
-    text-align: center;
-  }
 </style>

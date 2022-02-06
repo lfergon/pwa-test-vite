@@ -1,5 +1,5 @@
 <template>
-  <img :srcset="imagesSet" :src="imageSrc" alt="Image" width="320" class="image is-center">
+  <img :srcset="imagesSet" :src="imageSrc" alt="Image" class="image is-center">
 </template>
 
 <script lang="ts">

@@ -42,9 +42,9 @@ self.addEventListener('activate', function (event: ExtendableEvent) {
 
 self.addEventListener('fetch', function (event: FetchEvent) {
   const request = event.request;
-  console.log(request);
-  console.log(request.headers.get('Accept')?.indexOf('text/html'));
-  console.log(request.headers.get('Accept'));
+  // console.log(request);
+  // console.log(request.headers.get('Accept')?.indexOf('text/html'));
+  console.log("Accept headers: ", request.headers.get('Accept'));
   if (request.method !== 'GET') {
     event.respondWith(
       fetch(request).catch(function () {
@@ -89,7 +89,7 @@ self.addEventListener('fetch', function (event: FetchEvent) {
   if (requestURL.origin === location.origin) {
     // Load static assets from cache if network is down
     if (
-      /\.(css|js|woff|woff2|ttf|eot|svg|png|mp4)$/.test(requestURL.pathname)
+      /\.(css|js|woff|woff2|ttf|eot|svg|png|jpg|mp4)$/.test(requestURL.pathname)
     ) {
       event.respondWith(
         caches.open(cacheName).then((cache) =>

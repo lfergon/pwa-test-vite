@@ -1,22 +1,27 @@
 <template>
-  <img :src="imageSrc" alt="Image" width="320" class="image is-center">
+  <img :srcset="imagesSet" :src="imageSrc" alt="Image" width="320" class="image is-center">
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
 
   export default defineComponent({
-    name: 'Image',
+    name: 'GenericImage',
     props: {
       imageSrc: {
+        type: String,
+        required: true
+      },
+      imagesSet: {
         type: String,
         required: true
       }
     },
     setup(props) {
-      const {imageSrc} = props;
+      const {imageSrc, imagesSet} = props;
       return {
-        imageSrc
+        imageSrc,
+        imagesSet
       }
     }
   });

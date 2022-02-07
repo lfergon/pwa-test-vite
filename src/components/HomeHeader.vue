@@ -35,7 +35,7 @@ export default defineComponent({
     let showNav = ref(false);
     return {
       showNav
-    }
+    };
   }
 });
 </script>

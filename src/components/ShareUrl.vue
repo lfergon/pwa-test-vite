@@ -1,5 +1,5 @@
 <template>
-    <button v-if="canShareUrl" class="button navbar-item" @click="shareUrl">
+    <button v-if="canShareUrl" class="button" @click="shareUrl">
       <span class="icon-text">
         <span class="icon">
           <i class="fas fa-envelope-open-text"></i>
@@ -9,12 +9,12 @@
     </button>
 </template>
 
-<script>
+<script lang="ts">
   import { defineComponent, onMounted, ref } from 'vue';
 
   export default defineComponent({
     name: 'ShareUrl',
-    setup() {
+    setup: function() {
       let canShareUrl = ref(false);
       onMounted(() => {
         if (navigator.share) {
@@ -35,7 +35,7 @@
       return {
         shareUrl,
         canShareUrl
-      }
+      };
     }
   });
 </script>

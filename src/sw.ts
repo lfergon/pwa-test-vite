@@ -44,7 +44,7 @@ self.addEventListener('fetch', function (event: FetchEvent) {
   const request = event.request;
   // console.log(request);
   // console.log(request.headers.get('Accept')?.indexOf('text/html'));
-  console.log("Accept headers: ", request.headers.get('Accept'));
+  console.log('Accept headers: ', request.headers.get('Accept'));
   if (request.method !== 'GET') {
     event.respondWith(
       fetch(request).catch(function () {

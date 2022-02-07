@@ -1,5 +1,10 @@
 <template>
-  <img :srcset="imagesSet" :src="imageSrc" alt="Image" class="image is-center">
+  <img
+    :srcset="imagesSet"
+    :src="imageSrc"
+    alt="Image"
+    class="image is-center"
+  />
 </template>
 
 <script lang="ts">
@@ -10,22 +15,21 @@
     props: {
       imageSrc: {
         type: String,
-        required: true
+        required: true,
       },
       imagesSet: {
         type: String,
-        required: true
-      }
+        required: true,
+      },
     },
     setup(props) {
-      const {imageSrc, imagesSet} = props;
+      const { imageSrc, imagesSet } = props;
       return {
         imageSrc,
-        imagesSet
-      }
-    }
+        imagesSet,
+      };
+    },
   });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

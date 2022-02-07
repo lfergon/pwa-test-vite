@@ -8,7 +8,7 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "prettify": "pnpm prettier w -u ."
+    "format": "prettier --write \"**/*.{js,ts,vue,json,md,test.js}\""
   },
   "husky": {
     "hooks": {

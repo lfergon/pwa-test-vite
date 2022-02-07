@@ -8,8 +8,8 @@
   </div>
 </template>
 
-<script lang='ts'>
-  import {defineComponent, ref} from 'vue';
+<script lang="ts">
+  import { defineComponent, ref } from 'vue';
   export default defineComponent({
     name: 'PwaPrompt',
     setup() {
@@ -26,23 +26,22 @@
 
       const dismissPrompt = () => {
         show.value = false;
-      }
+      };
 
       const installPWA = () => {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then(() => {
           dismissPrompt();
-        })
+        });
       };
 
       return {
         show,
         installPWA,
-        dismissPrompt
+        dismissPrompt,
       };
-    }
+    },
   });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

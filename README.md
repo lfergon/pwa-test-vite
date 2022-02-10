@@ -20,9 +20,19 @@ Install: [https://vite-plugin-pwa.netlify.app/guide/](https://vite-plugin-pwa.ne
 
 [https://vite-plugin-pwa.netlify.app/frameworks/vue.html#prompt-for-update](https://vite-plugin-pwa.netlify.app/frameworks/vue.html#prompt-for-update)
 
+### Generate changelog
+
+`pnpm run changelog`
+
 ### Test
 
 `pnpm run test`
+
+### Apollo Vue 3
+
+On localhost development CORS plugin activated to request to GraphQL endpoint
+
+[https://v4.apollo.vuejs.org/](https://v4.apollo.vuejs.org/)
 
 ### Netlify Troubleshouting with Vite and Workbox combination
 

@@ -28,7 +28,7 @@
         imageSrc,
         imagesSet,
       };
-    },
+    }
   });
 </script>
 

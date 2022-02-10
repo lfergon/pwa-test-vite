@@ -1,20 +1,25 @@
 <template>
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <div class="columns">
-        <div class="column">
-          <PwaPrompt />
-          <ReloadPWA />
-        </div>
+  <div class="container has-text-centered">
+    <div class="columns">
+      <div class="column">
+        <PwaPrompt />
+        <ReloadPWA />
       </div>
-      <div class="columns">
-        <div class="column">
-          <HomeHeader />
-          <router-view />
-        </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <HomeHeader />
+        <router-view />
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <h5>
+        <strong>PWA Vite, Vue3 test</strong>
+      </h5>
+    </div>
+  </footer>
 </template>
 
 <script lang="ts">

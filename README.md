@@ -14,13 +14,7 @@ pnpm run install
 pnpm run dev
 ```
 
-### How to turn your existing Vue 3 App into a PWA
-
-```bash
-vue add pwa
-```
-
-### Vite Plugin for PWA
+### Vite Plugin for PWA (already install on the project)
 
 Install: [https://vite-plugin-pwa.netlify.app/guide/](https://vite-plugin-pwa.netlify.app/guide/)
 
@@ -30,6 +24,6 @@ Install: [https://vite-plugin-pwa.netlify.app/guide/](https://vite-plugin-pwa.ne
 
 `pnpm run test`
 
-### Netlify Troubleshouting Vite and Workbox
+### Netlify Troubleshouting with Vite and Workbox combination
 
 [https://github.com/antfu/vite-plugin-pwa/issues/89](https://github.com/antfu/vite-plugin-pwa/issues/89)

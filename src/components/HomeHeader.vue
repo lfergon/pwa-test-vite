@@ -28,6 +28,7 @@
       <div class="navbar-end">
         <router-link to="/" class="navbar-item">Counter</router-link>
         <router-link to="/home" class="navbar-item">Home</router-link>
+        <router-link to="/tea" class="navbar-item">Tea</router-link>
         <router-link to="/offline" class="navbar-item">Offline</router-link>
         <ShareUrl />
       </div>

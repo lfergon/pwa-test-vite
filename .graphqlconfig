@@ -1,10 +1,10 @@
 {
   "name": "Teas GraphQL Schema",
-  "schemaPath": "./path/to/schema.graphql",
+  "schemaPath": "src/domain/schemas/teas.graphql",
   "extensions": {
     "endpoints": {
       "Default GraphQL Endpoint": {
-        "url": "http://url/to/the/graphql/api",
+        "url": "https://graphql-teas-endpoint.netlify.app",
         "headers": {
           "user-agent": "JS GraphQL"
         },

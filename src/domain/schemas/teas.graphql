@@ -1,0 +1,64 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on OBJECT | FIELD_DEFINITION | INTERFACE
+
+type Mutation {
+    addProducer(producerInput: producerInput): Producer
+    addTea(teaInput: teaInput): Tea
+    deleteProducer(id: ID!): Boolean
+    deleteTea(id: ID!): Boolean
+    updateTea(args: teaUpdate, id: ID!): Tea!
+}
+
+type Producer {
+    id: ID!
+    location: String!
+    name: String!
+    teas: [Tea]!
+}
+
+type Query {
+    producerById(id: ID): Producer
+    producers(id: ID, location: String, name: String, teas: [teaInput]): [Producer]
+    teaById(id: ID): Tea
+    teas(description: String, id: ID, name: String, price: Float, producerId: String): [Tea]!
+}
+
+type Tea {
+    description: String!
+    id: ID!
+    name: String!
+    price: Float!
+}
+
+enum CacheControlScope {
+    PRIVATE
+    PUBLIC
+}
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload
+
+input producerInput {
+    location: String!
+    name: String!
+    teas: [teaInput]
+}
+
+input teaInput {
+    description: String!
+    name: String!
+    price: Float!
+    producerId: String!
+}
+
+input teaUpdate {
+    description: String
+    name: String
+    price: Float
+}

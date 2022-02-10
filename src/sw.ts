@@ -89,7 +89,7 @@ self.addEventListener('fetch', function (event: FetchEvent) {
   if (requestURL.origin === location.origin) {
     // Load static assets from cache if network is down
     if (
-      /\.(css|js|woff|woff2|ttf|eot|svg|png|jpg|mp4)$/.test(requestURL.pathname)
+      /\.(css|js|woff|woff2|ttf|eot|svg|jpeg|png|jpg|mp4)$/.test(requestURL.pathname)
     ) {
       event.respondWith(
         caches.open(cacheName).then((cache) =>

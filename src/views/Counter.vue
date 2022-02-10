@@ -42,9 +42,11 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue';
+  import { defineComponent, onMounted, watch } from 'vue';
   import useCounter from '@/domain/useVueCounter';
   import GenericImage from '@/components/GenericImage.vue';
+  import { getAllTeas } from '@/repositories/queries/getAllTeas';
+  import { AllTeas } from '@/domain/types/types';
 
   export default defineComponent({
     name: 'Counter',
@@ -53,6 +55,7 @@
     },
     setup() {
       const { count, increment, decrement } = useCounter();
+      console.log(getAllTeas());
       return {
         count,
         increment,

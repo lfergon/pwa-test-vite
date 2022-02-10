@@ -13,7 +13,7 @@ self.addEventListener('message', (event: ExtendableMessageEvent) => {
 
 self.addEventListener('install', function (event: ExtendableEvent) {
   event.waitUntil(
-    caches.open(version + cacheName).then(function (cache: Cache) {
+    caches.open(`${version}${cacheName}`).then(function (cache: Cache) {
       return cache.addAll([
         '/',
         '/home',

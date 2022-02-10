@@ -18,7 +18,7 @@ self.addEventListener('install', function (event: ExtendableEvent) {
         '/',
         '/home',
         '/offline',
-        // 'https://tignum.com/static/8276fa47544f39169bd89d07d1bfc054/ff82d/Web_363x203_2_1_5b9ec4e6f4.png'
+        'https://tignum.com/static/8276fa47544f39169bd89d07d1bfc054/ff82d/Web_363x203_2_1_5b9ec4e6f4.png'
       ]);
     })
   );

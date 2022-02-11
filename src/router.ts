@@ -1,8 +1,9 @@
+import { createRouter, createWebHistory } from 'vue-router';
 import Counter from '@/views/Counter.vue';
 import Home from '@/views/Home.vue';
 import Tea from '@/views/Tea.vue';
-import { createRouter, createWebHistory } from 'vue-router';
 import Offline from '@/views/Offline.vue';
+import SpaceXMissions from '@/views/SpaceXMissions.vue';
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/tea',
     name: 'Tea',
     component: Tea,
+  },
+  {
+    path: '/space-x-missions',
+    name: 'SpaceXMissions',
+    component: SpaceXMissions,
   },
 ];
 

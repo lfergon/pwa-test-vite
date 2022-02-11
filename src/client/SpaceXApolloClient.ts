@@ -4,17 +4,15 @@ import {
   InMemoryCache,
 } from '@apollo/client/core';
 
-// HTTP connection to the API
 const httpLink = createHttpLink({
-  // You should use an absolute URL here
-  uri: 'https://graphql-teas-endpoint.netlify.app/',
+  uri: 'https://api.spacex.land/graphql',
 });
 
 // Cache implementation
 const cache = new InMemoryCache();
 
 // Create the apollo client
-export const apolloClient = new ApolloClient({
+export const spaceXApolloClient = new ApolloClient({
   link: httpLink,
   cache,
 });

@@ -3,15 +3,15 @@ import { useQuery } from '@vue/apollo-composable';
 import { AllTeas } from '@/domain/types/types';
 
 export const getAllTea = () => {
-    const { result, loading, error } = useQuery<AllTeas>(gql`
-      query allTea {
-        teas {
-          name
-          id
-          description
-          price
-        }
+  const { result, loading, error } = useQuery<AllTeas>(gql`
+    query allTea {
+      teas {
+        name
+        id
+        description
+        price
       }
-    `);
-    return {result, loading, error};
+    }
+  `);
+  return { result, loading, error };
 };

@@ -8,8 +8,8 @@
       Error: {{ error.message }}
     </div>
     <div v-else-if="teas">
-      <div class="columns is-multiline is-mobile">
-        <div class="column is-one-third" v-for="tea of teas" :key="tea.id">
+      <div class="columns is-multiline is-desktop">
+        <div class="column" v-for="tea of teas" :key="tea.id">
           <CardTea
             :name="tea.name"
             :description="tea.description"

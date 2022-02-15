@@ -8,9 +8,9 @@
       Error: {{ error.message }}
     </div>
     <div v-else-if="missions">
-      <div class="columns is-multiline is-mobile">
+      <div class="columns is-multiline is-desktop">
         <div
-          class="column is-one-third"
+          class="column"
           v-for="mission of missions"
           :key="mission.id"
         >

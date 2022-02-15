@@ -19,7 +19,7 @@ export const getSpaceXMissions = () => {
     null,
     {
       fetchPolicy: 'cache-and-network',
-      clientId: 'startWarsClient',
+      clientId: 'spaceXClient',
     }
   );
   return { result, loading, error };

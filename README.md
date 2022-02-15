@@ -34,6 +34,10 @@ On localhost development CORS plugin activated to request to GraphQL endpoint
 
 [https://v4.apollo.vuejs.org/](https://v4.apollo.vuejs.org/)
 
+### iOS PWA prompt add to home screen
+
+[https://github.com/koddr/a2hs.js/](https://github.com/koddr/a2hs.js/)
+
 ### Netlify Troubleshouting with Vite and Workbox combination
 
 [https://github.com/antfu/vite-plugin-pwa/issues/89](https://github.com/antfu/vite-plugin-pwa/issues/89)

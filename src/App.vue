@@ -1,4 +1,5 @@
 <template>
+  <HomeHeader />
   <div class="container has-text-centered">
     <div class="columns">
       <div class="column">
@@ -6,11 +7,8 @@
         <ReloadPWA />
       </div>
     </div>
-    <div class="columns">
-      <div class="column">
-        <HomeHeader />
-        <router-view />
-      </div>
+    <div class="content">
+      <router-view />
     </div>
   </div>
   <footer class="footer">
@@ -39,9 +37,9 @@
 </script>
 
 <style>
-  #app {
+  html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 2rem;
+    margin: 0;
   }
 </style>

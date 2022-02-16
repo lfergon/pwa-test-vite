@@ -16,8 +16,8 @@ createApp({
     });
     AddToHomeScreen({
       brandName: "PWA test",
-      fontFamily: "Tahoma, sans-serif",
-      backgroundColor: "red",
+      fontFamily: "Tahoma, Helvetics, sans-serif",
+      backgroundColor: "#bbbbbb",
       color: "white"
     });
   },

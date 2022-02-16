@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "build": "vite build --debug",
-    "dev": "vite",
-    "serve": "vite preview",
+    "dev": "vite --host",
+    "serve": "vite preview --host",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",

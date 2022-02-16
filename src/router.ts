@@ -4,7 +4,6 @@ import Home from '@/views/Home.vue';
 import Tea from '@/views/Tea.vue';
 import Offline from '@/views/Offline.vue';
 import SpaceXMissions from '@/views/SpaceXMissions.vue';
-import CardSpaceXMission from '@/views/CardSpaceXMission.vue';
 
 const routes = [
   {
@@ -35,7 +34,7 @@ const routes = [
   {
     path: '/space-x-missions/:missionId',
     name: 'SpaceXMissions',
-    component: CardSpaceXMission,
+    component: SpaceXMissions,
   },
 ];
 

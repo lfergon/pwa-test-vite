@@ -19,8 +19,7 @@ self.addEventListener('install', function (event: ExtendableEvent) {
         '/home',
         '/offline',
         '/tea',
-        '/space-x-missions',
-        'https://tignum.com/static/8276fa47544f39169bd89d07d1bfc054/ff82d/Web_363x203_2_1_5b9ec4e6f4.png',
+        '/space-x-missions'
       ]);
     })
   );
@@ -42,7 +41,7 @@ self.addEventListener('activate', function (event: ExtendableEvent) {
   );
 });
 
-self.addEventListener('fetch', function (event: FetchEvent) {
+self.addEventListener('fetch', function(event: FetchEvent) {
   const request = event.request;
   // console.log(request);
   // console.log(request.headers.get('Accept')?.indexOf('text/html'));

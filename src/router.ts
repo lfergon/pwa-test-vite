@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path: '/space-x-missions/:missionId',
-    name: 'SpaceXMissions',
+    name: 'SpaceXMissions2',
     component: SpaceXMissions,
   },
 ];

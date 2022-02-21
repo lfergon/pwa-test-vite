@@ -1,13 +1,13 @@
 <template>
   <div class="content">
     <h1>This is the Counter page</h1>
-    <h3>The count is {{ count }}</h3>
+    <h3>The count is {{ getCount() }}</h3>
     <div class="field is-grouped">
       <p class="control is-center">
-        <button class="button is-link" @click="decrement(1)">Decrement</button>
+        <button class="button is-link" @click="modifyValueCount(-1)">Decrement</button>
       </p>
       <p class="control is-center">
-        <button class="button is-primary" @click="increment(1)">
+        <button class="button is-primary" @click="modifyValueCount(1)">
           Increment
         </button>
       </p>
@@ -41,27 +41,16 @@
   </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import useCounter from '@/domain/useVueCounter';
+<script setup lang="ts">
   import GenericImage from '@/components/GenericImage.vue';
-  import { getAllTea } from '@/repositories/queries/getAllTea';
-
-  export default defineComponent({
-    name: 'Counter',
-    components: {
-      GenericImage,
-    },
-    setup() {
-      const { count, increment, decrement } = useCounter();
-      console.log(getAllTea());
-      return {
-        count,
-        increment,
-        decrement,
-      };
-    },
-  });
+  import { useCounterStore } from '@/store/pinia/counter.store.pinia';
+  const store = useCounterStore();
+  const modifyValueCount = function(by: number) {
+    store.setCount(by);
+  }
+  const getCount = function() {
+    return store.count;
+  }
 </script>
 
 <style scoped></style>

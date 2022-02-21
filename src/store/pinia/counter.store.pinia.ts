@@ -1,10 +1,4 @@
-import {  defineStore, Store } from 'pinia';
-
-export type CounterStoreType = Store<"counterStore", {
-    count: number;
-}, {}, {
-    setCount(newCount: number): void;
-}>;
+import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counterStore', {
     state: () => ({
@@ -12,7 +6,10 @@ export const useCounterStore = defineStore('counterStore', {
     }),
     actions: {
         setCount(newCount: number) {
-            this.count = newCount;
+            this.count = this.count + newCount;
         }
+    },
+    getters: {
+        getCount: (state) => state.count
     }
 });

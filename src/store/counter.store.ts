@@ -1,19 +1,25 @@
-import vuexStore from './vuex/counter.store.vuex';
-import { VUEX_MUTATION_SET_COUNT } from './vuex/counter.store.vuex.mutations';
+import { useCounterStore, CounterStoreType } from './pinia/counter.store.pinia';
 
 class CounterStore {
+
+  counterStore: CounterStoreType
+
+  constructor() {
+    this.counterStore = useCounterStore();
+  }
+
   public subscribeToCount(callback: Function) {
-    vuexStore.subscribe((mutation, state) => {
+    this.counterStore.$subscribe((mutation, state) => {
       callback(state.count);
-    });
+    })
   }
 
   public getCount() {
-    return vuexStore.state.count;
+    return this.counterStore.count;
   }
 
   public setCount(newCount: number) {
-    vuexStore.commit(VUEX_MUTATION_SET_COUNT, newCount);
+    this.counterStore.setCount(newCount);
   }
 }
 

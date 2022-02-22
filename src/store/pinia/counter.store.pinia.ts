@@ -1,10 +1,4 @@
-import {  defineStore, Store } from 'pinia';
-
-export type CounterStoreType = Store<"counterStore", {
-    count: number;
-}, {}, {
-    setCount(newCount: number): void;
-}>;
+import {  defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counterStore', {
     state: () => ({

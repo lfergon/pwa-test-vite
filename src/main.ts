@@ -1,5 +1,6 @@
 import '../node_modules/bulma/css/bulma.css';
 import { createApp, provide, h } from 'vue';
+import { createPinia } from 'pinia';
 import { ApolloClients } from '@vue/apollo-composable';
 import { apolloClient } from '@/client/ApolloClient';
 import App from '@/App.vue';
@@ -23,5 +24,6 @@ createApp({
   },
   render: () => h(App),
 })
+  .use(createPinia())
   .use(router)
   .mount('#app');

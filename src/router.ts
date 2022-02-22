@@ -31,6 +31,11 @@ const routes = [
     name: 'SpaceXMissions',
     component: SpaceXMissions,
   },
+  {
+    path: '/space-x-missions/:missionId',
+    name: 'SpaceXMissions2',
+    component: SpaceXMissions,
+  },
 ];
 
 export const router = createRouter({

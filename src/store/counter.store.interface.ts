@@ -1,4 +1,4 @@
-export default interface CounterState {
+export interface CounterState {
     count: number;
 }
   

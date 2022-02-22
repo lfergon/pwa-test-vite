@@ -1,4 +1,4 @@
-import CounterState from '../counter.store.interface';
+import { CounterState } from '../counter.store.interface';
 
 export const VUEX_MUTATION_SET_COUNT = 'SET_COUNT';
 

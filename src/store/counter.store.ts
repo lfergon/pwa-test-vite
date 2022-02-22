@@ -8,17 +8,17 @@ class CounterStore {
     this.counterStore = useCounterStore();
   }
 
-  public subscribeToCount(callback: Function) {
+  subscribeToCount(callback: Function) {
     this.counterStore.$subscribe((mutation, state) => {
       callback(state.count);
     })
   }
 
-  public getCount() {
+  getCount() {
     return this.counterStore.count;
   }
 
-  public setCount(newCount: number) {
+  setCount(newCount: number) {
     this.counterStore.setCount(newCount);
   }
 }
